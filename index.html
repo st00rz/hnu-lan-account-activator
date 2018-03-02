@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+	<title>Crack HNU Lan</title>
+	<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+	<style type="text/css">
+		html, body {width: 100%; height: 100%;}
+		p {color: #CCC; text-align: center; font-weight: bolder;}
+		p a, p a:hover {color: #CCC; text-decoration: none; font-weight: bolder; font-size: 16pt;}
+		a.copyright, a.copyright:hover {font-size: small;}
+		#myframe {width: 100%; height: 100%;}
+		#hidden {width: 0px; height: 0px; display: none;}
+		#loading {width: 80px; height: 80px; background-image: url(loading.gif); position: absolute; left: 50%; margin-left: -40px; top:50%; margin-top: -40px; z-index: 999; display: none;}
+		span {font-size: small;}
+	</style>
+</head>
+<body>
+	<p>
+		<br /><br /><br />
+		<a id="step1" target="_blank" href="http://portal.hnu.edu.cn">==&gt;&nbsp;&nbsp; STEP1 Login Portal</a><br />
+		<a id="step2" href="javascript:void(0);">==&gt;&nbsp;&nbsp; STEP2 Crack out&nbsp;&nbsp;&nbsp;</a><br /><br />
+		<span>&copy;2015 <a class="copyright" target="_blank" href="http://shentong.xoom.it"><u>TongSHEN</u></a> | <a class="copyright" href="mailto:tshen@hnu.edu.cn"><u>tshen@hnu.edu.cn</u></a> | 086 15084949459</span>
+	</p>
+	<div id="loading"></div>
+	<iframe id="hidden" name="hidden" src=""></iframe>
+	<iframe id="myframe" name="myframe" src="" frameborder="0"></iframe>
+</body>
+<script type="text/javascript">
+$(function(){
+	$("#step1").click(function(){
+		$(this).siblings("a").css("color","#CCC");
+		$(this).css("color", "#555");
+		//$("#myframe").attr("src", "https://pt.hnu.edu.cn/zfca/login");
+	});
+	$("#step2").click(function(){
+		$(this).siblings("a").css("color","#CCC");
+		$(this).css("color", "#555");
+		$("#loading").show();
+		setTimeout(function(){
+			$("#hidden").attr("src", "https://pt.hnu.edu.cn/zfca?yhlx=student&login=0122579031373493687&url=login.aspx");
+		}, 3000);
+		setTimeout(function(){
+			$("#loading").hide();
+			$("#myframe").attr("src", "http://its-diy.hnu.edu.cn/lan/Register.aspx");
+		}, 9000);
+	});
+});
+</script>
+</html>
